@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Product Landing Page</title>
+</head>
+
+<body>
+    <!------------- Header ------------->
+
+    <section id="header">
+        <nav>
+            <a onClick="history.go(0);">
+                <img id="header-img" src="images/one-stop-logo.png" alt="One Stop Logo" class="logo"></a>
+
+            <div id="navLinks" class="nav-links">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#about">ABOUT</a></li> 
+                    <li><a href="#product">PRODUCT</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div id="text-box">
+            <h1>A Wise Man Once Said:</h1>
+            <q class="quote">You can't buy <strong class="strong">HAPPINESS</strong>, but you can buy a <strong class="strong">BIKE</strong> and that's pretty close.</q>
+            <br>
+            <br>
+            <a href="#video" class="hero-btn">Watch This Video To Know More</a>
+
+        </div>
+    </section>
+
+    <!------------- Java Script ------------->
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+
+    </script>
+
+
+
+    <!------------- About ------------->
+
+        <section id="about">
+            <h1>About Us</h1>
+            <p>Here's a promotional video down below</p>
+            <div id="video"> 
+                <iframe class="video" width="650" height="350" src="https://www.youtube.com/embed/vVXnYdHwDqM">
+                </iframe>
+                <p> Credits to the Owner of the Video</p>
+            </div>
+
+            <div id="des">
+                <h1><q>One Stop Bike Shop</q></h1> 
+                <p align="justify">We came up with the bike shop business idea due to the pandemic. Since the start of the pandemic,
+                   many people started buying bikes due to the lack of public transportation. It is also one of the
+                   new trend hobbies of many people. This caused a great rise in the demand for bike parts and bike services.
+                </p>
+
+                   <br>
+
+                <p align="justify">The goal of our business is to be the same as its name. We aim to be a one stop shop where the bikers can
+                   get their bike parts and services regardless of their available budget. We will offer services and products
+                   to our normal bikers, everyday workers, and even professional athletes. Our business offers fully built bikes
+                   for the use of everyone, different bike equipment's for the safety and efficiency of our riders, and Bike parts
+                   are also available in case of upgrades or replacement. We also offer maintenance and repair services to ensure
+                   the functionality and durability of the bikes.
+                </p>
+            </div>
+        </section>
+
+    <!------------- Product ------------->
+
+    <section id="product">
+        <h1> Products We Offer</h1>
+        <p>The products that can be bought from our bike shop</p>
+
+        <div class="row">
+            <div class="product-col">
+                <h3>FULLY BUILT BIKES</h3>
+                <p>Ready to use bike it has a good quality and durable that can handle anything you give it.</p>
+            </div>
+
+            <div class="product-col">
+                <h3>BIKE PARTS</h3>
+                <p>all kinds of bike parts are offered of all price points to cater to our customers for their upgrades and repairs.</p>
+            </div>
+
+            <div class="product-col">
+                <h3>BIKE EQUIPMENTS</h3>
+                <p>Bike equipment includes helmets, bike lights, etc. that is needed to ensure the safety of the biker and to make their life easier.</p>
+            </div>
+        </div>
+    </section>
+
+    <!------------- Services ------------->
+
+    <section id="service">
+        <h1>Services We Offer</h1>
+        <p>Services that can be availed in our bike shop</p>
+
+        <div class="row">
+            <div class="service-col">
+                <img src="images/bike-maintenance.png">
+                <div class="layer">
+                    <h3>BIKE MAINTENANCE</h3>
+                </div>
+            </div>
+            
+            <div class="service-col">
+                <img src="images/bike-wash.png">
+                <div class="layer">
+                    <h3>BIKE WASH</h3>
+                </div>
+            </div>
+
+            <div class="service-col">
+                <img src="images/bike-repair.png">
+                <div class="layer">
+                    <h3>BIKE REPAIR</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------- Contact Us ------------->
+
+    <section id="contact"> 
+        <h1>To Inquire for Our Products And Services</h1>
+        <form id="message">
+                    <input type="text" placeholder="Enter your Name" required>
+                    <input type="email" placeholder="Enter your Email" required>
+                    <textarea rows="5" placeholder="Your message"></textarea>
+                    <button type="submit" class="hero-btn red-btn">SEND</button>
+        </form>
+    </section>
+ 
+    <!------------- Footer ------------->
+    <footer><p>Coded by: Dion Tuazon</p>
+    </footer>
+    
+</body>
+
+</html>
